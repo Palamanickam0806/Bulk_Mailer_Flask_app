@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Mailer</title>
+    <link rel="stylesheet" href="../static/table.css">
+</head>
+<body>
+    <div class="header">BULK MAILER <br><span>eaze your work</span>
+    </div>
+    <div  class="success-box">
+        Success! All the mail was sent  successfully.
+    </div>
+    <div class="label">LIST OF MAIL HAS BEEN SENT :</div>
+    <div class="list">
+    {%for row in tables%}
+    <h2>
+        {{titles[loop.index]}}
+    </h2>
+    {{row|safe}}
+    {%endfor%}
+</div>
+</body>
+</html>

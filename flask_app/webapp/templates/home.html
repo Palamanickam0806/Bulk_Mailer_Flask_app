@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Mailer</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+
+<body>
+    <div class="header">BULK MAILER <br><span>eaze your work</span>
+    </div>
+
+    <form action="/table" method="post" enctype="multipart/form-data">
+        <div>
+            <div class="file-upload">
+                <label for="file-input" class="file-upload-label">
+                    <span>Upload the email excel file</span>
+                    <input type="file" name="file"
+                        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+            </div>
+            </label>
+            <div>
+                Sender mail :<input type="email" name="email" placeholder="Enter your mail id"><br>
+                App password : <input type="password" name="password" placeholder="16-digit password">
+
+            </div>
+            <div class="submit-container"> <input type='submit' value="Send"> </div>
+        </div>
+
+        <div class="mailbox">
+            Mail subject : <input type="text" name="subject" placeholder="example - students result -regs">
+            Mail Body : <textarea name="mail_body" placeholder="type the message here"></textarea>
+
+        </div>
+
+
+
+
+    </form>
+
+</body>
+
+</html>
